@@ -35,7 +35,7 @@ public class Application {
 		{	
 		case "1":
 			System.out.print("Enter information of contact to add in the following format - FirstName LastName, Street Address, City, State, " + 
-			"Zipcode, Telephone Number:\n");
+			"Zip Code, Telephone Number:\n");
 			String input = sc.nextLine();
 			phonebook.addContact(input);
 			break;

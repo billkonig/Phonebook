@@ -9,7 +9,6 @@ public class PhoneBook {
 	
 	static Scanner sc = new Scanner(System.in);
 	
-	//Lines 13-15 are all class variables.
 	static Person person = new Person();
 	static Address address = new Address();
 	static Person[] people = new Person[0];
@@ -30,7 +29,7 @@ public class PhoneBook {
 	}
 	public void printContacts() {
 		
-		//Sorting the "people" array in ascending order by last name.
+		//Sorting the "people" array in ascending alphabetical order by last name.
 		Arrays.sort(people, (a, b) -> a.getLastName().compareTo(b.getLastName()));
 
 		for(int i = 0; i < people.length; i++){
@@ -156,9 +155,9 @@ public class PhoneBook {
 				System.out.print("Enter new state: ");
 				String state = sc.nextLine();
 				address.setState(state);
-				System.out.print("Enter new zipcode: ");
-				String zipcode = sc.nextLine();
-				address.setZipcode(zipcode);
+				System.out.print("Enter new zip code: ");
+				String zipCode = sc.nextLine();
+				address.setZipCode(zipCode);
 				System.out.print("Enter new telephone number: ");
 				String telephoneNo = sc.nextLine();
 				person.setTelephoneNo(telephoneNo);
@@ -178,9 +177,9 @@ public class PhoneBook {
 		Person[] tempArray = new Person[people.length - 1];
 		int j = 0;
 		
-		//Telling the program to loop through "people" array (line 185) and if the telephone number from the input "contactToDelete" matches the
-		//telephone number of the element at index point "i", it will do nothing (lines 187-189).  But if they don't match, it will be added to the 
-		//empty array "tempArray" at index point "j" (line 191) and then "j" will go up by one (line 192) so that the next element at index point "i"
+		//Telling the program to loop through "people" array (line 184) and if the telephone number from the input "contactToDelete" matches the
+		//telephone number of the element at index point "i", it will do nothing (lines 186-188).  But if they don't match, it will be added to the 
+		//empty array "tempArray" at index point "j" (line 190) and then "j" will go up by one (line 191) so that the next element at index point "i"
 		//to be added to "tempArray" will have the next space (at "j"'s new spot (at + 1)) in the array available to it to fill.
 		for(int i = 0; i < people.length; i++) {
 			if (people[i].getTelephoneNo().equals(contactToDelete)) {
@@ -202,5 +201,3 @@ public class PhoneBook {
 		}
 	}
 }
-	
-

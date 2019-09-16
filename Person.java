@@ -44,7 +44,7 @@ public class Person {
 		this.telephoneNo = telephoneNo;
 	}
 	public String toString() {
-		//At the end of this "return" command line, we are formatting the "telephoneNo" value so that no matter how it is entered (e.g. 3142865443),
+		//At the end of this "return" command line, we are formatting the "telephoneNo" value so that no matter how it is entered (e.g. ##########),
 		//it will be returned in the format: (###) ###-####.
 		return firstName + " " + lastName + "\n" + address + "\n" + telephoneNo.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3") + "\n";
 	}
