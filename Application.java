@@ -1,9 +1,6 @@
 package thursday;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import thursday.Address;
-import thursday.Person;
 import thursday.PhoneBook;
 
 public class Application {
@@ -35,7 +32,7 @@ public class Application {
 		{	
 		case "1":
 			System.out.print("Enter information of contact to add in the following format - FirstName LastName, Street Address, City, State, " + 
-			"Zip Code, Telephone Number:\n");
+			"ZIP Code, Telephone Number:\n");
 			String input = sc.nextLine();
 			phonebook.addContact(input);
 			break;

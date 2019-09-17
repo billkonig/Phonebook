@@ -155,7 +155,7 @@ public class PhoneBook {
 				System.out.print("Enter new state: ");
 				String state = sc.nextLine();
 				address.setState(state);
-				System.out.print("Enter new zip code: ");
+				System.out.print("Enter new ZIP code: ");
 				String zipCode = sc.nextLine();
 				address.setZipCode(zipCode);
 				System.out.print("Enter new telephone number: ");
